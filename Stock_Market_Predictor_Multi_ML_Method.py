@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Final Project
 # The purpose of this project is to develop an elemantary understanding of algorytheomic trading. In the furure I hope to build a system that can make serious cash.  One project will not likely be sufficient - I suspect that it will require an effort equivilant to earning a masters degree.  
 # 
 # My expectations is to develop a model that can read ANY stock and successfully predict a few weeks of 3M stock readings.  The models being produced in this project will be based on time series algorytheoms, which allows for a 'one size fits all' approach, which allows for future scanning for grand opportunities.  One major advantage to this approach is that after the project, I can review the project and scan for the best opportunities to either invest, liquidate or continue building the model (ephasis on the last).  Because the sample size for predictions is so small, the hyperparameters must be vauge and hardly used to prevent from overfitting the model.  Most of the interpetation of the model will be based on the RMSE and the visualiztion of the model.  
@@ -24,29 +23,13 @@ import pandas as pd
 from datetime import datetime
 from datetime import date
 from dateutil.relativedelta import relativedelta
+from Alpaca_Connection import get_data_today
 
 
-
-
-# Load .env into environment variables
-load_dotenv()
-
-API_KEY = os.getenv("ALPACA_API_KEY")
-API_SECRET = os.getenv("ALPACA_SECRET_KEY")
-
-client = StockHistoricalDataClient(API_KEY, API_SECRET)
-# Define request
 symbol = 'mmm'
-request = StockBarsRequest(
-    symbol_or_symbols=[symbol],
-    timeframe=TimeFrame.Day,
-    start=datetime.combine(date.today()- relativedelta(years=1), datetime.min.time()),
-    end=datetime.combine(date.today(), datetime.min.time())
-)
 
-# Fetch data
-bars = client.get_stock_bars(request)
-df = bars.df  # Convert to pandas DataFrame
+bars = get_data_today(symbol)
+df= get_data_today(symbol)
 df = df.reset_index()
 
 
