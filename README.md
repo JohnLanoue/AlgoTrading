@@ -1,4 +1,3 @@
-7/30: NOT Production Ready! Read only!
 
 Todo:
   Create Alpaca data reading object that can pull data from anywhere without the massive overhead.  
