@@ -1,9 +1,5 @@
 7/30: NOT Production Ready! Read only!
 
-Issues: 
-  [In Progress]Yahoo Finance is depreciated and we need to figure out a better way to get financial reads
-  [Defined] Mirgrate notebooks to production ready script
-
 Todo:
   Create Alpaca data reading object that can pull data from anywhere without the massive overhead.  
   Evaluate Backtesting methods to implement. 
