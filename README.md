@@ -1,5 +1,8 @@
-Welcome to the money printing machine: (Not yet profitable nor in production ready state).  
+
+  Welcome to the money printing machine: (Not yet profitable nor in production ready state).  
+  
   There are three/four primary files: 
+  
     Stock Market Predictor:(Depreciated Sept 2025): 
     
       THE WEB SCRAPING FUNCTIONS ARE OBSOLETE: READ ONLY. 
