@@ -164,7 +164,7 @@ yahoo_finance_news[:4]
 
 pred = add_articles(yahoo_finance_news)
 predtmp = pred
-pred[2] 
+#pred[2] 
 
 
 # ## Handle the text
@@ -203,7 +203,7 @@ for i in range(0,len(pred)):
     pred[i]['Article'] = pre_process_text(pred[i]['Article'])
     pred[i]
     pred[i]['title'] = pre_process_text(pred[i]['title'].split(' '))
-pred[0]['title']    
+#pred[0]['title']    
 
 
 # In[13]:
@@ -302,6 +302,10 @@ resp[:1]
 
 # In[ ]:
 
+
+print("TST") 
+print(pd.DataFrame(pred).columns)
+print(pd.DataFrame(resp).columns)
 
 df= pd.merge(pd.DataFrame(pred), pd.DataFrame(resp), on='link', how = 'outer')
 df = df.dropna(subset = "1 day")

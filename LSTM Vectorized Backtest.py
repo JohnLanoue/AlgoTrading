@@ -5,7 +5,7 @@
 
 # In[25]:
 
-
+import pandas as pd
 import numpy as np
 from keras.models import Sequential 
 from keras.layers import Dense 
@@ -21,7 +21,7 @@ from keras.layers import Dropout
 # In[ ]:
 
 
-from Alpaca_Connection import get_data_today
+from Packages.Alpaca_Connection import get_data_today
 bars = get_data_today('mmm')
 df= get_data_today('mmm')
 
